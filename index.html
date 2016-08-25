@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -25,11 +26,17 @@
     </nav>
 
     <div class="jumbotron">
-        <div class="container">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-        </div>
+        <ul>
+            <li id="draggable" class="ui-state-highlight">Drag me down</li>
+        </ul>
+
+        <ul id="sortable">
+            <li class="ui-state-default">Item 1</li>
+            <li class="ui-state-default">Item 2</li>
+            <li class="ui-state-default">Item 3</li>
+            <li class="ui-state-default">Item 4</li>
+            <li class="ui-state-default">Item 5</li>
+        </ul>
     </div>
 
     <hr>
@@ -40,6 +47,8 @@
     </div>
 
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
+
+    <script src="js/vendor/jquery-ui.min.js"></script>
 
     <script src="js/vendor/bootstrap.min.js"></script>
 
