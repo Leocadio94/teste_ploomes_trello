@@ -38,7 +38,7 @@ li {
 }
 .card {
     vertical-align: top;
-    background-color: lightgray;
+    background-color: #CCC;
     color: black;
     border-radius: 3px;
     width: 270px;
@@ -48,9 +48,34 @@ li {
     float: left;
 }
 .card-title {
+    color: #1d1d1d;
     font-size: 18px;
     font-weight: 700;
-    line-height: 30px;
+}
+.list {
+    background-color: white;
+    border-radius: 3px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 6px;
+    max-width: 260px;
+    min-height: 20px;
+    position: relative;
+    padding: 10px;
+}
+.list:hover {
+    background-color: #EEE;
+}
+.add-card {
+    height: 270px;
+    width: 270px;
+    text-decoration: none;
+    color: #4d4d4d;
+}
+.add-card:hover {
+    background-color: #EEE;
+    color: #1d1d1d;
+    text-decoration: underline;
 }
 footer {
     padding-top: 10px;

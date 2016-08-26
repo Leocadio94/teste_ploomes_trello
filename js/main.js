@@ -1,10 +1,10 @@
 $(document).ready(function() {
     $(".sortable-board").sortable({
-        opacity: 0.7
+        opacity: 0.7,
+        placeholder: "ui-state-highlight"
     });
-    $("#draggable").draggable({
-        connectToSortable: "#sortable",
-        helper: "clone",
-        revert: "invalid"
+    $(".lists").sortable({
+        placeholder: "ui-state-highlight",
+        forcePlaceholderSize: true
     });
 });
