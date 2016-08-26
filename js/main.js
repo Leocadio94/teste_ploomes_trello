@@ -1,11 +1,10 @@
 $(document).ready(function() {
-    $("#sortable").sortable({
-        revert: true
+    $(".sortable-board").sortable({
+        opacity: 0.7
     });
     $("#draggable").draggable({
         connectToSortable: "#sortable",
         helper: "clone",
         revert: "invalid"
     });
-    $("ul, li").disableSelection();
 });
