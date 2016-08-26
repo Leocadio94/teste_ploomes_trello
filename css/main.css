@@ -36,7 +36,7 @@ li {
     font-weight: 700;
     line-height: 30px;
 }
-.card {
+.list, .sortable-board> .ui-state-highlight {
     vertical-align: top;
     background-color: #CCC;
     color: black;
@@ -47,12 +47,12 @@ li {
     margin-right: 10px;
     float: left;
 }
-.card-title {
+.list-title {
     color: #1d1d1d;
     font-size: 18px;
     font-weight: 700;
 }
-.list {
+.card, .cards> .ui-state-highlight {
     background-color: white;
     border-radius: 3px;
     border-bottom: 1px solid #ccc;
@@ -63,19 +63,29 @@ li {
     position: relative;
     padding: 10px;
 }
-.list:hover {
+.card:hover {
     background-color: #EEE;
 }
-.add-card {
+.add-card, .add-list {
     height: 270px;
     width: 270px;
     text-decoration: none;
     color: #4d4d4d;
+    padding: 10px 110px 5px 10px;
 }
-.add-card:hover {
+.add-list {
+    color: white;
+    padding: 10px 10px 10px 5px;
+}
+.add-card:hover, .add-list:hover {
     background-color: #EEE;
     color: #1d1d1d;
     text-decoration: underline;
+    border-radius: 3px;
+}
+.sortable-board> .ui-state-highlight, .cards> .ui-state-highlight {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
 }
 footer {
     padding-top: 10px;
