@@ -6,6 +6,7 @@ $(document).ready(function() {
     });
     $(".cards").sortable({
         placeholder: "ui-state-highlight",
-        forcePlaceholderSize: true
+        forcePlaceholderSize: true,
+        connectWith: ".cards"
     });
 });
