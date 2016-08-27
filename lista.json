@@ -1,0 +1,36 @@
+{
+    "board_title": "Meu quadro",
+    "lists": [{
+        "id": 1,
+        "title": "Titulo 1",
+        "cards": [
+            {"id":1, "content":"Texto 1"},
+            {"id":2, "content":"Texto 2"},
+            {"id":3, "content":"Texto 3"}
+        ]
+    }, {
+        "id": 2,
+        "title": "Titulo 2",
+        "cards": [
+          {"id":1, "content":"Texto 1"},
+          {"id":2, "content":"Texto 2"},
+          {"id":3, "content":"Texto 3"}
+        ]
+    }, {
+        "id": 3,
+        "title": "Titulo 3",
+        "cards": [
+          {"id":1, "content":"Texto 1"},
+          {"id":2, "content":"Texto 2"},
+          {"id":3, "content":"Texto 3"}
+        ]
+    }, {
+        "id": 4,
+        "title": "Titulo 4",
+        "cards": [
+          {"id":1, "content":"Texto 1"},
+          {"id":2, "content":"Texto 2"},
+          {"id":3, "content":"Texto 3"}
+        ]
+    }]
+}
