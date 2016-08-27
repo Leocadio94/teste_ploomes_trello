@@ -2,13 +2,13 @@ body {
     background-color: rgb(0, 121, 191);
     color: white;
     padding-top: 40px;
-}
-.content {
-    padding-left: 10px;
     width: auto;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+}
+.content {
+    padding: 70px 10px 10px 10px;
 }
 .navbar {
     background-color: #026aa7;
@@ -21,12 +21,9 @@ body {
     color: #DDD;
 }
 .navbar-title {
-  background-color: #044f7c;
-  margin-top: 40px;
-  padding-left: 15px;
-}
-.content {
-  padding: 70px 10px 10px 10px;
+    background-color: #044f7c;
+    margin-top: 40px;
+    padding-left: 15px;
 }
 .board-title {
     font-size: 18px;
@@ -67,22 +64,30 @@ body {
 .card:hover {
     background-color: #EEE;
 }
-.add-card, .add-list {
+.add-card, #add-list-btn {
     height: 270px;
     width: 270px;
     text-decoration: none;
     color: #4d4d4d;
     padding: 10px 110px 5px 10px;
 }
-.add-list {
+#board, #add-list {
+  display: inline-block;
+  ertical-align: top;
+}
+#add-list-btn {
     color: white;
     padding: 10px 10px 10px 5px;
 }
-.add-card:hover, .add-list:hover {
+.add-card:hover, #add-list-btn:hover {
     background-color: #EEE;
     color: #1d1d1d;
     text-decoration: underline;
     border-radius: 3px;
+}
+#form-add-list {
+    display: inline-block;
+    color: black;
 }
 .sortable-board> .ui-state-highlight, .cards> .ui-state-highlight {
     background-color: rgba(0, 0, 0, 0.5);
