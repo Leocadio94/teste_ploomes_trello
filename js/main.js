@@ -2,7 +2,7 @@ $(document).ready(function() {
     $.getJSON("lista.json", function(json) {
         getListaJSON(json);
         adicionarLista();
-        //adicionarCard();
+        adicionarCard();
         sortListsCards();
     });
 });
@@ -20,12 +20,18 @@ function getListaJSON(json) {
             "<h1 class='list-title'>" + titulo + "</h1>" +
             "<div id='card" + id + "'class='cards'>" +
             "</div>" +
-            "<a class='add-card' href='#'>Adicionar um cartão...</a>" +
+            "<div class='add-card'>" +
+            "<a class='add-card-btn' href='#'>Adicionar um cartão...</a>" +
+            "<form class='form-add-card'>" +
+            "<input class='add-card-input' type='text' placeholder='Adicionar um cartão...'></input>" +
+            "<input class='btn' type='submit' value='Add...'></input>" +
+            "</form>" +
+            "</div>" +
             "</div>");
 
         for (var j in cards) {
             $("#card" + id).append(
-                "<div id='" + cards[j].id + "' class='card'>" +
+                "<div id='content" + cards[j].id + "' class='card'>" +
                 cards[j].content +
                 "</div>");
         }
@@ -41,18 +47,51 @@ function adicionarLista() {
         $("#add-list-input").focus();
     });
 
-    $("#form-add-list").submit(function(event) {
+    $("#form-add-list").submit(function(e) {
+        e.preventDefault();
         $("#board").append(
             "<div class='list'>" +
             "<h1 class='list-title'>" + $("#add-list-input").val() + "</h1>" +
             "<div class='cards'>" +
             "</div>" +
-            "<a class='add-card' href='#'>Adicionar um cartão...</a>" +
+            "<div class='add-card'>" +
+            "<a class='add-card-btn' href='#'>Adicionar um cartão...</a>" +
+            "<form class='form-add-card'>" +
+            "<input class='add-card-input' type='text' placeholder='Adicionar um cartão...'></input>" +
+            "<input class='btn' type='submit' value='Add...'></input>" +
+            "</form>" +
+            "</div>" +
             "</div>");
-        $(".list:last-child").focus();
+        $("#add-list-btn").show();
+        $("#form-add-list").hide();
+        $("#add-list-input").val("");
+        $("#list").focus();
+    });
+}
+
+function adicionarCard() {
+    $(".form-add-card").hide();
+
+    $(".add-card-btn").click(function() {
+        var parent = $(this).closest(".list").attr("id");
+        console.log($("#2 .add-card-btn").attr("class"));
+        $("#" + parent + " .add-card .add-card-btn").hide();
+        $("#" + parent + " .add-card .form-add-card").show();
+        $("#" + parent + " .add-card .add-card-input").focus();
     });
 
-
+    $(".form-add-card").submit(function(e) {
+        e.preventDefault();
+        var parent = $(this).closest(".list").attr("id");
+        $("#card" + parent).append(
+            "<div class='card'>" +
+            $("#" + parent + " .add-card .add-card-input").val() +
+            "</div>");
+        $("#" + parent + " .add-card .add-card-btn").show();
+        $("#" + parent + " .add-card .form-add-card").hide();
+        $("#" + parent + " .add-card .add-card-input").val("");
+        $("#card"+parent).focus();
+    });
 }
 
 function sortListsCards() {

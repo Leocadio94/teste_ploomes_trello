@@ -28,6 +28,7 @@ body {
 .board-title {
     font-size: 18px;
     font-weight: 700;
+    margin-top: 15px;
 }
 .list, .sortable-board> .ui-state-highlight {
     vertical-align: top;
@@ -36,7 +37,7 @@ body {
     border-radius: 3px;
     width: 270px;
     min-height: 20px;
-    max-height: 700px;
+    max-height: 500px;
     padding-bottom: 10px;
     padding-left: 5px;
     margin-right: 10px;
@@ -64,28 +65,33 @@ body {
 .card:hover {
     background-color: #EEE;
 }
-.add-card, #add-list-btn {
+.add-card-btn, #add-list-btn {
     height: 270px;
     width: 270px;
     text-decoration: none;
     color: #4d4d4d;
     padding: 10px 110px 5px 10px;
 }
-#board, #add-list {
+#board, .add-card, #add-list {
   display: inline-block;
-  ertical-align: top;
+  vertical-align: top;
 }
-#add-list-btn {
+.add-card-btn, #add-list-btn {
+    cursor: pointer;
     color: white;
     padding: 10px 10px 10px 5px;
 }
-.add-card:hover, #add-list-btn:hover {
+.add-card-btn {
+  color: #4d4d4d;
+  padding: 10px 110px 5px 10px;
+}
+.add-card-btn:hover, #add-list-btn:hover {
     background-color: #EEE;
     color: #1d1d1d;
     text-decoration: underline;
     border-radius: 3px;
 }
-#form-add-list {
+#form-add-list, .form-add-card {
     display: inline-block;
     color: black;
 }
